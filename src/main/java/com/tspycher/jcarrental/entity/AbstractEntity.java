@@ -23,6 +23,10 @@ public abstract class AbstractEntity {
     
     protected Date created;
     protected Date updated;
+
+    /*public Integer getId() {
+    	return 0;
+    }*/
     
     /**
      * @return the created
@@ -56,9 +60,10 @@ public abstract class AbstractEntity {
             this.updated = updated;
     }
 
+    
     @PrePersist
     protected void setDate() {
-            this.created = new Date();
-            this.updated = new Date();
+            this.created = new Date(System.currentTimeMillis());
+           	this.updated = (this.updated == null) ? new Date(System.currentTimeMillis()) : this.updated;
     }
 }
