@@ -61,7 +61,35 @@
         <url>http://repository.primefaces.org</url>
     </repository>
   </repositories>
+  
+  <pluginRepositories>
+  <pluginRepository>
+     <id>sonatype-oss-public</id>
+     <url>https://oss.sonatype.org/content/groups/public</url>
+     <releases>
+         <enabled>true</enabled>
+     </releases>
+     <snapshots>
+         <enabled>true</enabled>
+     </snapshots>
+ </pluginRepository>
+  </pluginRepositories>
   <build>
     <finalName>jcarrental</finalName>
+    <plugins>
+  <plugin>
+ <groupId>com.jelastic</groupId>
+ <artifactId>jelastic-maven-plugin</artifactId>
+ <version>1.7-SNAPSHOT</version>
+ <configuration>
+    <email>me@tspycher.com</email>
+    <password>Feelfree</password>
+    <context>jcarrental</context>
+    <environment>tspycher</environment>
+    <comment>Blubb</comment>
+    <api_hoster>app.appengine.flow.ch</api_hoster>
+ </configuration>
+</plugin>
+  </plugins>
   </build>
 </project>

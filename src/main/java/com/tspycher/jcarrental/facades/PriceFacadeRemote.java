@@ -7,8 +7,8 @@ import javax.validation.Valid;
 import com.tspycher.jcarrental.entity.Price;
 
 @Remote
-public interface PriceFacadeRemote {
-
+public interface PriceFacadeRemote {	
+	
 	/**
 	 * Use this method to persist a new Price object within the database If the
 	 * Price already exits, this one will not be persisted
