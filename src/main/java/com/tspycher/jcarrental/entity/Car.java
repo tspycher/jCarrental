@@ -157,4 +157,16 @@ public class Car extends AbstractEntity implements Serializable {
 	public void setYear(Integer year) {
 		this.year = year;
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Car [id=" + id + ", vendor=" + vendor + ", model=" + model
+				+ ", hp=" + hp + ", places=" + places + ", month=" + month
+				+ ", year=" + year + ", price=" + price + "]";
+	}
+	
+	
 }

@@ -16,7 +16,7 @@ import com.tspycher.jcarrental.facades.CarFacadeRemote;
 @TransactionManagement(TransactionManagementType.CONTAINER)
 @TransactionAttribute(value = TransactionAttributeType.REQUIRES_NEW)
 public class CarFacade extends AbstractFacade<Car> implements CarFacadeRemote {
-
+	
 	public List<Car> findAll() {
 		// TODO Auto-generated method stub
 		return null;

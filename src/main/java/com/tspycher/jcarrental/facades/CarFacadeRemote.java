@@ -3,12 +3,14 @@ package com.tspycher.jcarrental.facades;
 import java.util.List;
 
 import javax.ejb.Remote;
+import javax.persistence.EntityTransaction;
 import javax.validation.Valid;
 import com.tspycher.jcarrental.entity.Car;
+import com.tspycher.jcarrental.entity.Price;
 
 @Remote
 public interface CarFacadeRemote {
-
+	public EntityTransaction getEntityTransation();
 	/**
 	 * Use this method to persist a new Car object within the database If the
 	 * Car already exits, this one will not be persisted
@@ -19,6 +21,8 @@ public interface CarFacadeRemote {
 	 */
 	@Valid
 	void create(Car Car);
+
+	public void create(List<Car> list);
 
 	/**
 	 * Use this method to edit the Car object. Use the find method afterwards

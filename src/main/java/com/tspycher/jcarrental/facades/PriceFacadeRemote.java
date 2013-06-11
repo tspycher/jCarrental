@@ -3,12 +3,13 @@ package com.tspycher.jcarrental.facades;
 import java.util.List;
 
 import javax.ejb.Remote;
+import javax.persistence.EntityTransaction;
 import javax.validation.Valid;
 import com.tspycher.jcarrental.entity.Price;
 
 @Remote
 public interface PriceFacadeRemote {	
-	
+	public EntityTransaction getEntityTransation();
 	/**
 	 * Use this method to persist a new Price object within the database If the
 	 * Price already exits, this one will not be persisted
@@ -19,6 +20,9 @@ public interface PriceFacadeRemote {
 	 */
 	@Valid
 	void create(Price Price);
+	
+	public void create(List<Price> list);
+
 
 	/**
 	 * Use this method to edit the Price object. Use the find method afterwards
