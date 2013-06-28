@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <packaging>pom</packaging>
+    <name>Base</name>
+
+    <groupId>com.tspycher.jcarrental</groupId>
+    <artifactId>jcarrental-parent</artifactId>
+    <version>1.0.0</version>
+
+    <modules>
+        <module>jcarrental-model</module>
+        <module>jcarrental-ui</module>
+        <module>jcarrental-business</module>
+        <module>jcarrental-ear</module>
+        <module>jcarrental-rest</module>
+    <module>jcarrental-facility</module>
+  </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-api</artifactId>
+                <version>6.0</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
