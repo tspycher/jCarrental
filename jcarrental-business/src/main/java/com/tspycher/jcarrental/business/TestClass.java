@@ -15,4 +15,12 @@ public class TestClass implements TestClassLocal {
         // TODO Auto-generated constructor stub
     }
 
+	@Override
+	public String blubb() {
+		// TODO Auto-generated method stub
+		return "Test 2... 3... 4...";
+	}
+    
+    
+
 }

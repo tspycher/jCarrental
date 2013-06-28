@@ -54,7 +54,6 @@
                     <attachClasses>true</attachClasses>
                     <classesClassifier>classes</classesClassifier>
  		       <failOnMissingWebXml>false</failOnMissingWebXml>
-
                 </configuration>
             </plugin>
 
